@@ -19,7 +19,7 @@ Hook::action( 'ns.after-login-fields', $afterForm );
                     @if ( ! ns()->option->get( 'ns_store_square_logo', false ) )
                     <img class="w-32" src="{{ asset( 'svg/nexopos-variant-1.svg' ) }}" alt="NexoPOS">
                     @else
-                    <img src="{{ ns()->option->get( 'ns_store_square_logo' ) }}" alt="NexoPOS">
+                    <img  class="w-32" src="{{ ns()->option->get( 'ns_store_rectangle_logo' ) }}" alt="NexoPOS">
                     @endif
                 </div>
                 <x-session-message></x-session-message>

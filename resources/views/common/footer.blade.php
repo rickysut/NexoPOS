@@ -13,7 +13,7 @@ $authentication     =   [
 ];
 
 $json               =   [
-    'ns_currency_symbol'                =>  $options->get( 'ns_currency_symbol', '$' ),
+    'ns_currency_symbol'                =>  $options->get( 'ns_currency_symbol', '$') . ' '  ,
     'ns_currency_iso'                   =>  $options->get( 'ns_currency_iso', 'USD' ),
     'ns_currency_position'              =>  $options->get( 'ns_currency_position', 'before' ),
     'ns_currency_thousand_separator'    =>  $options->get( 'ns_currency_thousand_separator', ',' ),
