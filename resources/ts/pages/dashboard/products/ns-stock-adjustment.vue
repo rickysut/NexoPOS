@@ -222,7 +222,7 @@ export default {
 </script>
 <template>
     <div>
-        <div class="input-field flex border-2 input-group rounded">
+        <div class="input-field flex border input-group rounded">
             <input @keyup.esc="closeSearch()" v-model="search" type="text" class="p-2 flex-auto outline-none">
             <button class="px-3 py-2 rounded-none">{{ __( 'Search' ) }}</button>
         </div>
@@ -255,21 +255,21 @@ export default {
                     <tr :key="product.id" v-for="product of products">
                         <td class="p-2">{{ product.name }} ({{ ( product.accurate_tracking === 1 ? product.available_quantity : product.adjust_unit.quantity ) || 0 }})</td>
                         <td class="p-2">
-                            <div class="input-group border-2 info">
+                            <div class="input-group border info">
                                 <select @change="recalculateProduct( product )" v-model="product.adjust_unit" class="outline-none p-2 w-full">
                                     <option :key="quantity.id" v-for="quantity of product.quantities" :value="quantity">{{ quantity.unit.name }}</option>
                                 </select>
                             </div>
                         </td>
                         <td class="p-2">
-                            <div class="input-group border-2 info">
+                            <div class="input-group border info">
                                 <select @change="recalculateProduct( product )" v-model="product.adjust_action" name="" id="" class="outline-none p-2 w-full">
                                     <option v-for="action of actions" :key="action.value" :value="action.value">{{ action.label }}</option>
                                 </select>
                             </div>
                         </td>
                         <td class="p-2">
-                            <div v-if="product.accurate_tracking === 1" class="input-group border-2 info">
+                            <div v-if="product.accurate_tracking === 1" class="input-group border info">
                                 <select @change="recalculateProduct( product )" v-model="product.procurement_product_id" name="" id="" class="outline-none p-2 bg-white w-full">
                                     <option v-for="action of product.procurement_history" :key="action.value" :value="action.value">{{ action.label }}</option>
                                 </select>

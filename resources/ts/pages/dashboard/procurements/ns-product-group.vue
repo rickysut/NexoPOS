@@ -2,7 +2,7 @@
     <div class="flex flex-col px-4 w-full">
         <div class="md:-mx-4 flex flex-col md:flex-row">
             <div class="md:px-4 w-full">
-                <div class="input-group border-2 rounded info flex w-full">
+                <div class="input-group border rounded info flex w-full">
                     <input :placeholder="__( 'Search products...' )" v-model="searchValue" type="text" class="flex-auto p-2 outline-none">
                     <button @click="setSalePrice()" class="px-2">{{ __( 'Set Sale Price' ) }}</button>
                 </div>

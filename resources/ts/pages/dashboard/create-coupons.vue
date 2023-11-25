@@ -154,7 +154,7 @@ export default {
                         <a v-if="returnUrl" :href="returnUrl" class="rounded-full border ns-inset-button error px-2 py-1">{{ __( 'Return' ) }}</a>
                     </div>
                 </div>
-                <div :class="form.main.disabled ? 'disabled' : ( form.main.errors.length > 0 ? 'error' : 'info' )" class="input-group flex border-2 rounded overflow-hidden">
+                <div :class="form.main.disabled ? 'disabled' : ( form.main.errors.length > 0 ? 'error' : 'info' )" class="input-group flex border rounded overflow-hidden">
                     <input v-model="form.main.value"
                         @blur="formValidation.checkField( form.main )"
                         @change="formValidation.checkField( form.main )"

@@ -326,7 +326,7 @@ export default {
             </ul>
         </div>
         <div class="content w-full overflow-hidden flex" v-if="currentPage.name === 'upload'">
-            <div id="dropping-zone" @click="triggerManualUpload()" :class="isDragging ? 'border-dashed border-2' : ''" class="flex flex-auto m-2 p-2 flex-col border-info-primary items-center justify-center">
+            <div id="dropping-zone" @click="triggerManualUpload()" :class="isDragging ? 'border-dashed border' : ''" class="flex flex-auto m-2 p-2 flex-col border-info-primary items-center justify-center">
                 <h3 class="text-lg md:text-xl font-bold text-center text-primary mb-4">{{ __( 'Click Here Or Drop Your File To Upload' ) }}</h3>
                 <input style="display:none" type="file" name="" multiple ref="files" id="">
                 <div class="rounded w-full md:w-2/3 text-primary h-56 overflow-y-auto ns-scrollbar p-2">

@@ -12,7 +12,7 @@
                     :label="__( 'Apply A Coupon' )"
                     padding="p-2"
                     identifier="apply-coupon">
-                    <div class="border-2 input-group info rounded flex">
+                    <div class="border input-group info rounded flex">
                         <input ref="coupon" @keyup.enter="loadCoupon()" v-model="couponCode" type="text" class="w-full text-primary p-2 outline-none" :placeholder="placeHolder">
                         <button @click="loadCoupon()" class="px-3 py-2">{{ __( 'Load' ) }}</button>
                     </div>

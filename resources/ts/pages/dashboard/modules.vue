@@ -26,7 +26,7 @@
         </div>
         <div class="module-section flex-auto flex flex-wrap -mx-4">
             <div v-if="noModules" class="p-4 flex-auto flex">
-                <div class="flex h-full flex-auto border-dashed border-2 border-box-edge bg-surface justify-center items-center">
+                <div class="flex h-full flex-auto border-dashed border border-box-edge bg-surface justify-center items-center">
                     <h2 class="font-bold text-xl text-primary">{{ noModuleMessage }}</h2>
                 </div>
             </div>

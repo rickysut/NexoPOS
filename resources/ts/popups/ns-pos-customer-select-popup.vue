@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="p-2 border-b ns-box-body flex justify-between text-primary">
-                <div class="input-group flex-auto border-2 rounded">
+                <div class="input-group flex-auto border rounded">
                     <input
                         ref="searchField" 
                         @keydown.enter="attemptToChoose()"

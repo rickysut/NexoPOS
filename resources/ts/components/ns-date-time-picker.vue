@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="h-32 flex items-center justify-center text-primary">
-                        <div class="rounded input-group info border-2 flex w-2/3 overflow-hidden">
+                        <div class="rounded input-group info border flex w-2/3 overflow-hidden">
                             <button @click="subYear()" class="px-4 py-2">
                                 <i class="las la-minus"></i>
                             </button>

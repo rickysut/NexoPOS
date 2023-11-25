@@ -325,7 +325,7 @@ Vue.component( 'label-printing', {
                                 <h3 class="font-semibold">{{ __( 'Products' ) }}</h3>
                             </div>
                             <div class="body p-2">
-                                <div class="input-group info rounded border-2">
+                                <div class="input-group info rounded border">
                                     <input v-model="search_product" class=" w-full p-2" placeholder="{{ __( 'Search Products...' ) }}"/>
                                 </div>
                                 <div class="h-0 relative anim-duration-300 fade-in-entrance" v-if="resultSuggestions.length > 0">

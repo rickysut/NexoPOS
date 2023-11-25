@@ -12,7 +12,7 @@
                         <a v-if="returnUrl" :href="returnUrl" class="rounded-full border ns-inset-button error hover:bg-error-tertiary  px-2 py-1">{{ __( 'Return' ) }}</a>
                     </div>
                 </div>
-                <div :class="form.main.disabled ? '' : form.main.errors.length > 0 ? 'border-error-tertiary' : ''" class="input-group info flex border-2 rounded overflow-hidden">
+                <div :class="form.main.disabled ? '' : form.main.errors.length > 0 ? 'border-error-tertiary' : ''" class="input-group info flex border rounded overflow-hidden">
                     <input v-model="form.main.value"
                         @blur="formValidation.checkField( form.main )"
                         @change="formValidation.checkField( form.main )"
@@ -107,8 +107,8 @@
                                                 <p class="py-1 text-sm text-primary">{{ field.description }}</p>
                                             </div>
                                             <div class="mb-2">
-                                                <div @click="addUnitGroup( field )" class="border-dashed border-2 p-1 bg-box-elevation-background border-box-elevation-edge flex justify-between items-center text-primary cursor-pointer rounded-lg">
-                                                    <span class="rounded-full border-2 ns-inset-button info h-8 w-8 flex items-center justify-center">
+                                                <div @click="addUnitGroup( field )" class="border-dashed border p-1 bg-box-elevation-background border-box-elevation-edge flex justify-between items-center text-primary cursor-pointer rounded-lg">
+                                                    <span class="rounded-full border ns-inset-button info h-8 w-8 flex items-center justify-center">
                                                         <i class="las la-plus-circle"></i>
                                                     </span>
                                                     <span>{{ __( 'New Group' ) }}</span>

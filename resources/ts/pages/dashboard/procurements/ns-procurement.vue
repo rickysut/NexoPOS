@@ -453,7 +453,7 @@ export default {
                         <a v-if="returnUrl" :href="returnUrl" class="rounded-full ns-inset-button border px-2 py-1">{{ __( 'Go Back' ) }}</a>
                     </div>
                 </div>
-                <div :class="form.main.disabled ? 'disabled' : ( form.main.errors.length > 0 ? 'error' : '' )" class="flex border-2 rounded input-group info overflow-hidden">
+                <div :class="form.main.disabled ? 'disabled' : ( form.main.errors.length > 0 ? 'error' : '' )" class="flex border rounded input-group info overflow-hidden">
                     <input v-model="form.main.value" 
                         @blur="formValidation.checkField( form.main )" 
                         @change="formValidation.checkField( form.main )" 
@@ -486,7 +486,7 @@ export default {
                         </div>
                         <div class="card-body ns-tab-item rounded-br-lg rounded-bl-lg shadow p-2 " v-if="activeTab.identifier === 'products'">
                             <div class="mb-2">
-                                <div class="input-group info flex border-2 rounded overflow-hidden">
+                                <div class="input-group info flex border rounded overflow-hidden">
                                     <input
                                         v-model="searchValue"
                                         type="text" 
@@ -511,7 +511,7 @@ export default {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="( product, index ) of form.products" :key="index" :class="product.procurement.$invalid ? 'error border-2 border-error-primary' : ''">
+                                        <tr v-for="( product, index ) of form.products" :key="index" :class="product.procurement.$invalid ? 'error border border-error-primary' : ''">
                                             <template v-for="( column, key ) of form.columns" >
                                                 <td :key="key" v-if="column.type === 'name'" class="p-2 text-primary border">
                                                     <span class="font-semibold">{{ product.name }}</span>
@@ -530,14 +530,14 @@ export default {
                                                 </td>
                                                 <td :key="key" v-if="column.type === 'text'" class="p-2 w-3 text-primary border">
                                                     <div class="flex items-start">
-                                                        <div class="input-group rounded border-2">
+                                                        <div class="input-group rounded border">
                                                             <input @change="updateLine( index )" type="text" v-model="product.procurement[ key ]" class="w-24 p-2">
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td :key="key" v-if="column.type === 'tax_group_id'" class="p-2 text-primary border">
                                                     <div class="flex items-start">
-                                                        <div class="input-group rounded border-2">
+                                                        <div class="input-group rounded border">
                                                             <select @change="updateLine( index )" v-model="product.procurement.tax_group_id" class="p-2">
                                                                 <option v-for="option of taxes" :key="option.id" :value="option.id">{{ option.name }}</option>
                                                             </select>
@@ -546,7 +546,7 @@ export default {
                                                 </td>
                                                 <td :key="key" v-if="column.type === 'custom_select'" class="p-2 text-primary border">
                                                     <div class="flex items-start">
-                                                        <div class="input-group rounded border-2">
+                                                        <div class="input-group rounded border">
                                                             <select @change="updateLine( index )" v-model="product.procurement[ key ]" class="p-2">
                                                                 <option v-for="option of column.options" :key="option.value" :value="option.value">{{ option.label }}</option>
                                                             </select>
@@ -560,7 +560,7 @@ export default {
                                                 </td>
                                                 <td :key="key" v-if="column.type === 'unit_quantities'" class="p-2 text-primary border">
                                                     <div class="flex items-start">
-                                                        <div class="input-group rounded border-2">
+                                                        <div class="input-group rounded border">
                                                             <select @change="fetchLastPurchasePrice( index )" v-model="product.procurement.unit_id" class="p-2 w-32">
                                                                 <option v-for="option of product.unit_quantities" :key="option.id" :value="option.unit.id">{{ option.unit.name }}</option>
                                                             </select>

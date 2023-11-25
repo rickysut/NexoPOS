@@ -6,7 +6,7 @@
         </div>
         <div class="p-2">
             <div class="ns-input">
-                <textarea v-model="input" name="" id="" cols="30" rows="10" class="w-full border-2 p-2"></textarea>
+                <textarea v-model="input" name="" id="" cols="30" rows="10" class="w-full border p-2"></textarea>
             </div>
         </div>
         <div class="flex border-t action-buttons">
