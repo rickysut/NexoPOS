@@ -15,7 +15,7 @@
                 ns-avatar
                 w-32 md:w-56 flex flex-col border py-2 justify-center hover:border-opacity-0 cursor-pointer hover:shadow-lg">
                 <ns-avatar 
-                    display-name="{{ Auth::user()->username }}"
+                    display-name="{{ Auth::user()->attribute ? (Auth::user()->attribute->first_name ? Auth::user()->attribute->first_name . ' ' .Auth::user()->attribute->second_name : Auth::user()->username) : Auth::user()->username }}"
                     url="{{ Auth::user()->attribute ? Auth::user()->attribute->avatar_link : asset( 'images/user.png' ) }}"></ns-avatar>
             </div>
             <div class="relative">

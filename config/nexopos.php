@@ -4,16 +4,8 @@ return [
     'version' => '4.8.22',
     'languages' => [
         'en' => 'English',
-        'de' => 'Deutsch',
-        'fr' => 'Français',
-        'es' => 'Espanol',
-        'it' => 'Italian',
-        'ar' => 'Arabic',
-        'pt' => 'Portuguese',
-        'tr' => 'Türkçe',
-        'vi' => 'Vietnamese',
-        'sq' => 'Shqiptare',
-        'nl' => 'Nederlands',
+        'id' => 'Indonesia',
+        'fr' => 'French'
     ],
     'rtl-languages' => [ 'ar' ],
     'timezones' => [

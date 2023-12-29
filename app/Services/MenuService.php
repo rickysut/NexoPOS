@@ -15,13 +15,14 @@ class MenuService
                 'label' => __( 'Dashboard' ),
                 'permissions' => [ 'update.core', 'read.dashboard' ],
                 'icon' => 'la-home',
-                'childrens' => [
-                    'index' => [
-                        'label' => __( 'Home' ),
-                        'permissions' => [ 'read.dashboard' ],
-                        'href' => ns()->url( '/dashboard' ),
-                    ],
-                ],
+                'href' => ns()->url( '/dashboard' ),
+                // 'childrens' => [
+                //     'index' => [
+                //         'label' => __( 'Home' ),
+                //         'permissions' => [ 'read.dashboard' ],
+                //         'href' => ns()->url( '/dashboard' ),
+                //     ],
+                // ],
             ],
             'pos' => [
                 'label' => __( 'POS' ),

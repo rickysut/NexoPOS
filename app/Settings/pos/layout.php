@@ -29,7 +29,7 @@ return [
             'options' => $audios,
             'label' => __( 'Sale Complete Sound' ),
             'type' => 'select-audio',
-            'description' => __( 'Change the layout of the POS.' ),
+            'description' => __( 'The sound that plays when sale completed.' ),
         ], [
             'name' => 'ns_pos_new_item_audio',
             'value' => ns()->option->get( 'ns_pos_new_item_audio' ),
