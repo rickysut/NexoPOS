@@ -76,7 +76,7 @@ if ( Auth::check() ) {
                 <div class="ns-scrollbar overflow-y-auto h-full text-sm">
                     <div class="logo py-4 flex justify-center items-center">
                         @if ( ns()->option->get( 'ns_store_rectangle_logo' ) )
-                        <img src="{{ ns()->option->get( 'ns_store_rectangle_logo' ) }}" class="w-11/12" alt="logo"/>
+                        <a  href= "{{ ns()->url( '/dashboard' )}}"><img src="{{ ns()->option->get( 'ns_store_rectangle_logo' ) }}" class="w-11/12" alt="logo"></a>
                         @else
                         <h1 class="font-black text-transparent bg-clip-text bg-gradient-to-b from-blue-200 to-indigo-400 text-3xl">NexoPOS</h1>
                         @endif
@@ -96,6 +96,7 @@ if ( Auth::check() ) {
                             @endif
                         @endforeach
                     </ul>
+                    <div class="py-4 flex justify-center items-center"></div>
                 </div>
             </div>
             <div id="dashboard-overlay" v-if="sidebar === 'visible'" @click="closeMenu()" class="z-40 w-full h-full md:hidden absolute" style="background: rgb(51 51 51 / 25%)"></div>
@@ -122,9 +123,7 @@ if ( Auth::check() ) {
                     @endif
                 </div>
                 <div class="p-2 text-xs flex justify-end text-gray-500">
-                    {!!
-                        Hook::filter( 'ns-footer-signature', sprintf( __( 'You\'re using <a tager="_blank" href="%s" class="hover:text-blue-400 mx-1 inline-block">NexoPOS %s</a>' ), 'https://my.nexopos.com/en', config( 'nexopos.version' ) ) )
-                    !!}
+                    <!-- { ! ! Hook::filter( 'ns-footer-signature', sprintf( __( 'You\'re using <a tager="_blank" href="%s" class="hover:text-blue-400 mx-1 inline-block">NexoPOS %s</a>' ), 'https://my.nexopos.com/en', config( 'nexopos.version' ) ) ) ! ! } -->
                 </div>
             </div>
         </div>

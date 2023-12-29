@@ -1,10 +1,10 @@
 <template>
     <div class="flex justify-between items-center flex-shrink-0">
         <span class="hidden md:inline-block px-2">{{ __( 'Howdy, {name}' ).replace( '{name}', this.displayName ) }}</span>
-        <span class="md:hidden px-2">{{ displayName }}</span>
+        <span class="md:hidden px-2">{{ this.displayName }}</span>
         <div class="px-2">
             <div class="w-8 h-8 overflow-hidden rounded-full bg-gray-600">
-                <img v-if="avatarUrl !== ''" :src="avatarUrl" class="w-8 h-8 overflow-hidden rounded-full" :alt="displayName" srcset="">
+                <img v-if="avatarUrl !== ''" :src="avatarUrl" class="w-8 h-8 overflow-hidden rounded-full" :alt="this.displayName" srcset="">
                 <div v-html="svg" v-if="avatarUrl === ''"></div>
             </div>
         </div>
